@@ -1,8 +1,8 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { saveComment } from 'actions';
+import React from "react";
+import { connect } from "react-redux";
+import * as actions from "actions";
 class ComponentBox extends React.Component {
-  state = { comment: '' };
+  state = { comment: "" };
 
   onInputChange = e => {
     this.setState({ comment: e.target.value });
@@ -11,7 +11,7 @@ class ComponentBox extends React.Component {
   onFormSubmit = e => {
     e.preventDefault();
     this.props.saveComment(this.state.comment);
-    this.setState({ comment: '' });
+    this.setState({ comment: "" });
   };
 
   render() {
@@ -28,8 +28,7 @@ class ComponentBox extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log('state: ', state);
   return { comments: state.comments };
 };
 
-export default connect(mapStateToProps, { saveComment })(ComponentBox);
+export default connect(null, actions)(ComponentBox);
