@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import * as actions from "actions";
+
 class ComponentBox extends React.Component {
   state = { comment: "" };
 
@@ -10,7 +11,7 @@ class ComponentBox extends React.Component {
 
   onFormSubmit = e => {
     e.preventDefault();
-    this.props.saveComment(this.state.comment);
+    // this.props.saveComment(this.state.comment);
     this.setState({ comment: "" });
   };
 
