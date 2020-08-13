@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import ComponentBox from "components/ComponentBox";
+import CommentBox from "components/CommentBox";
 import Root from "Root";
 
 let wrapped;
@@ -8,7 +8,7 @@ let wrapped;
 beforeEach(() => {
   wrapped = mount(
     <Root>
-      <ComponentBox />
+      <CommentBox />
     </Root>
   );
 });

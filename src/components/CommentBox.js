@@ -11,7 +11,7 @@ class ComponentBox extends React.Component {
 
   onFormSubmit = e => {
     e.preventDefault();
-    // this.props.saveComment(this.state.comment);
+    this.props.saveComment(this.state.comment);
     this.setState({ comment: "" });
   };
 
@@ -27,9 +27,5 @@ class ComponentBox extends React.Component {
     );
   }
 }
-
-const mapStateToProps = state => {
-  return { comments: state.comments };
-};
 
 export default connect(null, actions)(ComponentBox);
