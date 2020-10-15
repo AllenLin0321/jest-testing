@@ -5,6 +5,7 @@ class ComponentList extends React.Component {
   render() {
     return (
       <div>
+        <h4>Comment List</h4>
         <ul>
           {this.props.comments.map((comment, index) => (
             <li key={index}>{comment}</li>
