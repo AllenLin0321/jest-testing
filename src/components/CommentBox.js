@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import * as actions from "actions";
-
 class ComponentBox extends React.Component {
   state = { comment: "" };
 
@@ -17,13 +16,16 @@ class ComponentBox extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.onFormSubmit}>
-        <h4>Add a Comment</h4>
-        <textarea value={this.state.comment} onChange={this.onInputChange} />
-        <div>
-          <button>Submit Comment</button>
-        </div>
-      </form>
+      <div>
+        <form onSubmit={this.onFormSubmit}>
+          <h4>Add a Comment</h4>
+          <textarea value={this.state.comment} onChange={this.onInputChange} />
+          <div>
+            <button>Submit Comment</button>
+          </div>
+        </form>
+        <button onClick={this.props.fetchComments}>Fetch Comment</button>
+      </div>
     );
   }
 }

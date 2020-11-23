@@ -6,8 +6,10 @@ import ComponentList from "./CommentList";
 const App = () => {
   return (
     <div>
-      <Route path="/post" component={ComponentBox} />
-      <Route path="/" exact component={ComponentList} />
+      <ComponentBox />
+      <ComponentList />
+      {/* <Route path="/post" component={ComponentBox} />
+      <Route path="/" exact component={ComponentList} /> */}
     </div>
   );
 };
