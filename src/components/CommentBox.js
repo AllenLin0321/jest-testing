@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import * as actions from "actions";
+import requireAuthHOC from "components/requireAuth";
 class ComponentBox extends React.Component {
   state = { comment: "" };
 
@@ -32,4 +33,4 @@ class ComponentBox extends React.Component {
   }
 }
 
-export default connect(null, actions)(ComponentBox);
+export default connect(null, actions)(requireAuthHOC(ComponentBox));
