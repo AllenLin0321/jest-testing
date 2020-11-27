@@ -6,7 +6,7 @@ export const saveComment = comment => ({
   payload: comment,
 });
 
-export const fetchComments = async () => {
+export const fetchComments = () => {
   const res = axios.get("http://jsonplaceholder.typicode.com/comments");
   return {
     type: FETCH_COMMENTS,
